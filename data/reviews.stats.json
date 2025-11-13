@@ -1,0 +1,70 @@
+{
+  "totalReviews": 200,
+  "averageRating": 4.6,
+  "goodRate": 0.92,
+  "ratingDistribution": {
+    "5": 120,
+    "4": 64,
+    "3": 12,
+    "2": 3,
+    "1": 1
+  },
+  "dishReviews": [
+    {
+      "dishId": "dish_1",
+      "totalReviews": 85,
+      "averageRating": 4.7,
+      "ratings": { "5": 55, "4": 25, "3": 4, "2": 1, "1": 0 }
+    },
+    {
+      "dishId": "dish_2",
+      "totalReviews": 62,
+      "averageRating": 4.5,
+      "ratings": { "5": 35, "4": 22, "3": 4, "2": 1, "1": 0 }
+    },
+    {
+      "dishId": "dish_3",
+      "totalReviews": 38,
+      "averageRating": 4.4,
+      "ratings": { "5": 20, "4": 12, "3": 4, "2": 1, "1": 1 }
+    },
+    {
+      "dishId": "dish_4",
+      "totalReviews": 15,
+      "averageRating": 4.8,
+      "ratings": { "5": 10, "4": 5, "3": 0, "2": 0, "1": 0 }
+    }
+  ],
+  "recentReviews": [
+    {
+      "id": "review_1",
+      "dishId": "dish_1",
+      "rating": 5,
+      "comment": "Absolutely delicious! Perfect spice level.",
+      "customerName": "John D.",
+      "createdAt": "2024-11-12T19:30:00Z"
+    },
+    {
+      "id": "review_2",
+      "dishId": "dish_2",
+      "rating": 4,
+      "comment": "Great taste, portion could be bigger.",
+      "customerName": "Sarah M.",
+      "createdAt": "2024-11-12T18:45:00Z"
+    },
+    {
+      "id": "review_3",
+      "dishId": "dish_3",
+      "rating": 5,
+      "comment": "Fresh and crispy, loved the dipping sauce!",
+      "customerName": "Mike L.",
+      "createdAt": "2024-11-12T17:20:00Z"
+    }
+  ],
+  "monthlyTrend": [
+    { "month": "2024-08", "totalReviews": 45, "averageRating": 4.3 },
+    { "month": "2024-09", "totalReviews": 67, "averageRating": 4.5 },
+    { "month": "2024-10", "totalReviews": 88, "averageRating": 4.6 }
+  ],
+  "lastUpdated": "2024-11-13T03:30:00Z"
+}

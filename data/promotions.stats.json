@@ -1,0 +1,52 @@
+{
+  "activePromotions": [
+    {
+      "id": "promo_1",
+      "name": "Lunch Special",
+      "type": "discount",
+      "value": 15,
+      "startDate": "2024-11-01T00:00:00Z",
+      "endDate": "2024-11-30T23:59:59Z",
+      "applicableDishes": ["dish_1", "dish_2"],
+      "totalOrders": 156,
+      "totalRevenue": 4680.00,
+      "discountGiven": 702.00,
+      "conversionRate": 0.23
+    },
+    {
+      "id": "promo_2",
+      "name": "Buy 2 Get 1 Free Appetizers",
+      "type": "bogo",
+      "value": 1,
+      "startDate": "2024-11-10T00:00:00Z",
+      "endDate": "2024-11-20T23:59:59Z",
+      "applicableDishes": ["dish_3"],
+      "totalOrders": 42,
+      "totalRevenue": 756.00,
+      "discountGiven": 252.00,
+      "conversionRate": 0.18
+    }
+  ],
+  "completedPromotions": [
+    {
+      "id": "promo_3",
+      "name": "Grand Opening Special",
+      "type": "discount",
+      "value": 20,
+      "startDate": "2024-10-01T00:00:00Z",
+      "endDate": "2024-10-31T23:59:59Z",
+      "applicableDishes": ["dish_1", "dish_2", "dish_3", "dish_4"],
+      "totalOrders": 324,
+      "totalRevenue": 12960.00,
+      "discountGiven": 2592.00,
+      "conversionRate": 0.35
+    }
+  ],
+  "overallStats": {
+    "totalPromotionalOrders": 522,
+    "totalPromotionalRevenue": 18396.00,
+    "totalDiscountGiven": 3546.00,
+    "averageConversionRate": 0.25
+  },
+  "lastUpdated": "2024-11-13T03:30:00Z"
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cat_1",
+    "name": "Main Dishes",
+    "sortOrder": 1,
+    "description": "Traditional main course dishes",
+    "isActive": true,
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": "cat_2",
+    "name": "Appetizers",
+    "sortOrder": 2,
+    "description": "Light starters and appetizers",
+    "isActive": true,
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": "cat_3",
+    "name": "Beverages",
+    "sortOrder": 3,
+    "description": "Hot and cold drinks",
+    "isActive": true,
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": "cat_4",
+    "name": "Desserts",
+    "sortOrder": 4,
+    "description": "Sweet treats and desserts",
+    "isActive": true,
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-01-15T08:00:00Z"
+  }
+]

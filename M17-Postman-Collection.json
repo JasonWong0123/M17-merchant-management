@@ -1,0 +1,641 @@
+{
+  "info": {
+    "name": "M17 Merchant Management API",
+    "description": "Complete API test collection for M17 Merchant Management System",
+    "version": "1.0.0",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "categoryId",
+      "value": "cat_1",
+      "type": "string"
+    },
+    {
+      "key": "dishId",
+      "value": "dish_1",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "API Info",
+      "item": [
+        {
+          "name": "API Info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api",
+              "host": ["{{baseUrl}}"],
+              "path": ["api"]
+            },
+            "description": "Get basic API information"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Menu Management",
+      "item": [
+        {
+          "name": "Categories",
+          "item": [
+            {
+              "name": "Get All Categories",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/categories",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "categories"]
+                },
+                "description": "Retrieve all menu categories"
+              }
+            },
+            {
+              "name": "Get Categories (Filtered)",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/categories?isActive=true&sortBy=sortOrder&sortOrder=asc",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "categories"],
+                  "query": [
+                    {
+                      "key": "isActive",
+                      "value": "true"
+                    },
+                    {
+                      "key": "sortBy",
+                      "value": "sortOrder"
+                    },
+                    {
+                      "key": "sortOrder",
+                      "value": "asc"
+                    }
+                  ]
+                },
+                "description": "Get categories with filtering and sorting"
+              }
+            },
+            {
+              "name": "Create Category",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"New Category\",\n  \"description\": \"A new menu category\",\n  \"sortOrder\": 5,\n  \"isActive\": true\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/category",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "category"]
+                },
+                "description": "Create a new category"
+              }
+            },
+            {
+              "name": "Update Category",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Updated Category Name\",\n  \"description\": \"Updated description\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/category/{{categoryId}}",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "category", "{{categoryId}}"]
+                },
+                "description": "Update an existing category"
+              }
+            },
+            {
+              "name": "Update Categories Sort Order",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\"id\": \"cat_1\", \"sortOrder\": 2},\n  {\"id\": \"cat_2\", \"sortOrder\": 1}\n]"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/categories/sort",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "categories", "sort"]
+                },
+                "description": "Update sort order of multiple categories"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Dishes",
+          "item": [
+            {
+              "name": "Get All Dishes",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/dishes",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "dishes"]
+                },
+                "description": "Retrieve all dishes"
+              }
+            },
+            {
+              "name": "Get Dishes (Filtered)",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/dishes?categoryId=cat_1&status=on&sortBy=price&sortOrder=asc",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "dishes"],
+                  "query": [
+                    {
+                      "key": "categoryId",
+                      "value": "cat_1"
+                    },
+                    {
+                      "key": "status",
+                      "value": "on"
+                    },
+                    {
+                      "key": "sortBy",
+                      "value": "price"
+                    },
+                    {
+                      "key": "sortOrder",
+                      "value": "asc"
+                    }
+                  ]
+                },
+                "description": "Get dishes with filtering and sorting"
+              }
+            },
+            {
+              "name": "Get Dish by ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/dish/{{dishId}}",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "dish", "{{dishId}}"]
+                },
+                "description": "Get a specific dish by ID"
+              }
+            },
+            {
+              "name": "Create Dish",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"categoryId\": \"cat_1\",\n  \"name\": \"Spicy Beef Noodles\",\n  \"description\": \"Traditional spicy beef noodle soup with rich broth\",\n  \"price\": 45.00,\n  \"ingredients\": [\"beef\", \"noodles\", \"spices\", \"vegetables\"],\n  \"allergens\": [\"gluten\"],\n  \"preparationTime\": 25,\n  \"calories\": 580,\n  \"isSpicy\": true,\n  \"isVegetarian\": false\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/dish",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "dish"]
+                },
+                "description": "Create a new dish"
+              }
+            },
+            {
+              "name": "Update Dish",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Updated Dish Name\",\n  \"description\": \"Updated description\",\n  \"price\": 39.99\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/dish/{{dishId}}",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "dish", "{{dishId}}"]
+                },
+                "description": "Update an existing dish"
+              }
+            },
+            {
+              "name": "Update Dish Status",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"status\": \"off\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/dish/{{dishId}}/status",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "dish", "{{dishId}}", "status"]
+                },
+                "description": "Update dish status (on/off)"
+              }
+            },
+            {
+              "name": "Batch Update Dish Status",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dishIds\": [\"dish_1\", \"dish_2\", \"dish_3\"],\n  \"status\": \"on\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/dishes/batch-status",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "dishes", "batch-status"]
+                },
+                "description": "Update status for multiple dishes"
+              }
+            },
+            {
+              "name": "Upload Dish Image (Simulated)",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dishId\": \"dish_1\",\n  \"filename\": \"spicy_beef_noodles.jpg\",\n  \"mimetype\": \"image/jpeg\",\n  \"size\": 1024000\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/merchant/upload/dish-image",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "merchant", "upload", "dish-image"]
+                },
+                "description": "Simulate dish image upload"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Inventory Management",
+      "item": [
+        {
+          "name": "Get All Inventory",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/inventory",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "inventory"]
+            },
+            "description": "Get all inventory items"
+          }
+        },
+        {
+          "name": "Get Low Stock Dishes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/dishes/low-stock",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "dishes", "low-stock"]
+            },
+            "description": "Get dishes with low stock"
+          }
+        },
+        {
+          "name": "Get Out of Stock Dishes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/dishes/out-of-stock",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "dishes", "out-of-stock"]
+            },
+            "description": "Get dishes that are out of stock"
+          }
+        },
+        {
+          "name": "Update Dish Stock",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"stock\": 75,\n  \"alertThreshold\": 10,\n  \"supplier\": \"Premium Ingredients Ltd\",\n  \"cost\": 18.50,\n  \"expiryDate\": \"2024-12-31T23:59:59Z\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/dish/{{dishId}}/stock",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "dish", "{{dishId}}", "stock"]
+            },
+            "description": "Update stock for a specific dish"
+          }
+        },
+        {
+          "name": "Adjust Stock",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"adjustment\": -5,\n  \"reason\": \"Items sold during lunch rush\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/dish/{{dishId}}/adjust-stock",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "dish", "{{dishId}}", "adjust-stock"]
+            },
+            "description": "Adjust stock levels (add or subtract)"
+          }
+        },
+        {
+          "name": "Batch Update Stock",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"dishId\": \"dish_1\",\n    \"stock\": 50,\n    \"alertThreshold\": 10,\n    \"cost\": 15.50\n  },\n  {\n    \"dishId\": \"dish_2\",\n    \"stock\": 30,\n    \"alertThreshold\": 5,\n    \"cost\": 18.00\n  }\n]"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/inventory/batch-update",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "inventory", "batch-update"]
+            },
+            "description": "Update stock for multiple dishes"
+          }
+        },
+        {
+          "name": "Get Inventory Summary",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/inventory/summary",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "inventory", "summary"]
+            },
+            "description": "Get inventory summary statistics"
+          }
+        },
+        {
+          "name": "Sync Inventory",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/inventory/sync",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "inventory", "sync"]
+            },
+            "description": "Synchronize inventory with dishes"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reports & Analytics",
+      "item": [
+        {
+          "name": "Order Statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/orders/statistics",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "orders", "statistics"]
+            },
+            "description": "Get order statistics"
+          }
+        },
+        {
+          "name": "Promotion Statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/promotions/statistics",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "promotions", "statistics"]
+            },
+            "description": "Get promotion statistics"
+          }
+        },
+        {
+          "name": "Review Statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/reviews/statistics",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "reviews", "statistics"]
+            },
+            "description": "Get review statistics"
+          }
+        },
+        {
+          "name": "Export Sales Report (JSON)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/reports/export?type=sales&format=json&startDate=2024-11-01&endDate=2024-11-30",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "reports", "export"],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "sales"
+                },
+                {
+                  "key": "format",
+                  "value": "json"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2024-11-01"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2024-11-30"
+                }
+              ]
+            },
+            "description": "Export sales report in JSON format"
+          }
+        },
+        {
+          "name": "Custom Analytics",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"metrics\": [\"revenue\", \"orders\", \"topDishes\"],\n  \"dimensions\": [\"time\", \"category\"],\n  \"dateRange\": {\n    \"startDate\": \"2024-11-01T00:00:00Z\",\n    \"endDate\": \"2024-11-30T23:59:59Z\"\n  },\n  \"aggregation\": \"sum\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/analytics/custom",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "analytics", "custom"]
+            },
+            "description": "Generate custom analytics"
+          }
+        },
+        {
+          "name": "Dashboard Summary",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/dashboard/summary",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "dashboard", "summary"]
+            },
+            "description": "Get dashboard summary"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Error Testing",
+      "item": [
+        {
+          "name": "404 Not Found",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/nonexistent",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "nonexistent"]
+            },
+            "description": "Test 404 error handling"
+          }
+        },
+        {
+          "name": "Invalid Dish Creation (Missing Fields)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Incomplete Dish\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/dish",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "dish"]
+            },
+            "description": "Test validation error with missing required fields"
+          }
+        },
+        {
+          "name": "Invalid Category ID",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"categoryId\": \"invalid_cat\",\n  \"name\": \"Test Dish\",\n  \"price\": 25.99\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/merchant/dish",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "merchant", "dish"]
+            },
+            "description": "Test validation error with invalid category ID format"
+          }
+        }
+      ]
+    }
+  ]
+}

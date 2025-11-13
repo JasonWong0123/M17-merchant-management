@@ -1,0 +1,82 @@
+[
+  {
+    "dishId": "dish_1",
+    "stock": 100,
+    "alertThreshold": 10,
+    "lastUpdated": "2025-11-13T04:21:20.054Z",
+    "supplier": "test_supplier",
+    "cost": 15.5
+  },
+  {
+    "dishId": "dish_2",
+    "stock": 30,
+    "alertThreshold": 8,
+    "lastUpdated": "2024-11-13T03:30:00Z",
+    "supplier": "Premium Meat Supply",
+    "cost": 18,
+    "expiryDate": "2024-11-14T23:59:59Z"
+  },
+  {
+    "dishId": "dish_3",
+    "stock": 3,
+    "alertThreshold": 5,
+    "lastUpdated": "2024-11-13T03:30:00Z",
+    "supplier": "Vegetable Market",
+    "cost": 8,
+    "expiryDate": "2024-11-13T23:59:59Z"
+  },
+  {
+    "dishId": "dish_4",
+    "stock": 100,
+    "alertThreshold": 10,
+    "lastUpdated": "2024-11-13T03:30:00Z",
+    "supplier": "Tea Imports Ltd",
+    "cost": 3.5,
+    "expiryDate": "2025-01-13T23:59:59Z"
+  },
+  {
+    "dishId": "dish_5",
+    "stock": 0,
+    "alertThreshold": 3,
+    "lastUpdated": "2024-11-13T03:30:00Z",
+    "supplier": "Dairy Fresh",
+    "cost": 9,
+    "expiryDate": "2024-11-12T23:59:59Z"
+  },
+  {
+    "dishId": "dish_6",
+    "stock": 0,
+    "alertThreshold": 5,
+    "lastUpdated": "2025-11-13T03:53:33.613Z",
+    "supplier": "",
+    "cost": 0,
+    "expiryDate": null
+  },
+  {
+    "dishId": "dish_7",
+    "stock": 0,
+    "alertThreshold": 5,
+    "lastUpdated": "2025-11-13T04:08:44.494Z",
+    "supplier": "",
+    "cost": 0,
+    "expiryDate": null
+  },
+  {
+    "dishId": "dish_8",
+    "stock": 0,
+    "alertThreshold": 5,
+    "lastUpdated": "2025-11-13T04:08:49.788Z",
+    "supplier": "",
+    "cost": 0,
+    "expiryDate": null
+  },
+  {
+    "dishId": "dish_9",
+    "stock": 0,
+    "alertThreshold": 5,
+    "lastUpdated": "2025-11-13T04:19:59.033Z",
+    "supplier": "",
+    "cost": 0,
+    "expiryDate": null
+  }
+]

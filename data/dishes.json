@@ -1,0 +1,192 @@
+[
+  {
+    "id": "dish_1",
+    "categoryId": "cat_1",
+    "name": "Kung Pao Chicken",
+    "description": "Spicy stir-fried chicken with peanuts and vegetables",
+    "price": 38,
+    "status": "on",
+    "stock": 100,
+    "imageUrl": "/images/dishes/kung-pao-chicken.jpg",
+    "ingredients": [
+      "chicken",
+      "peanuts",
+      "bell peppers",
+      "chili"
+    ],
+    "allergens": [
+      "nuts"
+    ],
+    "preparationTime": 15,
+    "calories": 420,
+    "isSpicy": true,
+    "isVegetarian": false,
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2025-11-13T04:21:20.057Z"
+  },
+  {
+    "id": "dish_2",
+    "categoryId": "cat_1",
+    "name": "Sweet and Sour Pork",
+    "description": "Crispy pork with pineapple in sweet and sour sauce",
+    "price": 42,
+    "status": "on",
+    "stock": 30,
+    "imageUrl": "/images/dishes/sweet-sour-pork.jpg",
+    "ingredients": [
+      "pork",
+      "pineapple",
+      "bell peppers",
+      "onion"
+    ],
+    "allergens": [],
+    "preparationTime": 20,
+    "calories": 520,
+    "isSpicy": false,
+    "isVegetarian": false,
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": "dish_3",
+    "categoryId": "cat_2",
+    "name": "Spring Rolls",
+    "description": "Crispy vegetable spring rolls with dipping sauce",
+    "price": 18,
+    "status": "on",
+    "stock": 3,
+    "imageUrl": "/images/dishes/spring-rolls.jpg",
+    "ingredients": [
+      "cabbage",
+      "carrot",
+      "mushroom",
+      "wrapper"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "preparationTime": 10,
+    "calories": 180,
+    "isSpicy": false,
+    "isVegetarian": true,
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": "dish_4",
+    "categoryId": "cat_3",
+    "name": "Jasmine Tea",
+    "description": "Traditional Chinese jasmine green tea",
+    "price": 12,
+    "status": "on",
+    "stock": 100,
+    "imageUrl": "/images/dishes/jasmine-tea.jpg",
+    "ingredients": [
+      "jasmine tea leaves"
+    ],
+    "allergens": [],
+    "preparationTime": 5,
+    "calories": 0,
+    "isSpicy": false,
+    "isVegetarian": true,
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": "dish_5",
+    "categoryId": "cat_4",
+    "name": "Mango Pudding",
+    "description": "Creamy mango pudding with fresh fruit",
+    "price": 22,
+    "status": "off",
+    "stock": 0,
+    "imageUrl": "/images/dishes/mango-pudding.jpg",
+    "ingredients": [
+      "mango",
+      "milk",
+      "gelatin",
+      "sugar"
+    ],
+    "allergens": [
+      "dairy"
+    ],
+    "preparationTime": 5,
+    "calories": 220,
+    "isSpicy": false,
+    "isVegetarian": true,
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": "dish_6",
+    "categoryId": "cat_1",
+    "name": "Test Dish",
+    "description": "A test dish",
+    "price": 25.99,
+    "status": "on",
+    "stock": 0,
+    "imageUrl": "",
+    "ingredients": [],
+    "allergens": [],
+    "preparationTime": 0,
+    "calories": 0,
+    "isSpicy": false,
+    "isVegetarian": true,
+    "createdAt": "2025-11-13T03:53:33.609Z",
+    "updatedAt": "2025-11-13T03:53:33.609Z"
+  },
+  {
+    "id": "dish_7",
+    "categoryId": "cat_1",
+    "name": "????",
+    "description": "????????",
+    "price": 29.99,
+    "status": "on",
+    "stock": 0,
+    "imageUrl": "",
+    "ingredients": [],
+    "allergens": [],
+    "preparationTime": 0,
+    "calories": 0,
+    "isSpicy": false,
+    "isVegetarian": true,
+    "createdAt": "2025-11-13T04:08:44.491Z",
+    "updatedAt": "2025-11-13T04:08:44.491Z"
+  },
+  {
+    "id": "dish_8",
+    "categoryId": "cat_1",
+    "name": "Test Dish",
+    "description": "A test dish",
+    "price": 25.99,
+    "status": "on",
+    "stock": 0,
+    "imageUrl": "",
+    "ingredients": [],
+    "allergens": [],
+    "preparationTime": 0,
+    "calories": 0,
+    "isSpicy": false,
+    "isVegetarian": true,
+    "createdAt": "2025-11-13T04:08:49.786Z",
+    "updatedAt": "2025-11-13T04:08:49.786Z"
+  },
+  {
+    "id": "dish_9",
+    "categoryId": "cat_1",
+    "name": "test_dish",
+    "description": "this_is_test_dish",
+    "price": 29.99,
+    "status": "on",
+    "stock": 0,
+    "imageUrl": "",
+    "ingredients": [],
+    "allergens": [],
+    "preparationTime": 0,
+    "calories": 0,
+    "isSpicy": false,
+    "isVegetarian": true,
+    "createdAt": "2025-11-13T04:19:59.030Z",
+    "updatedAt": "2025-11-13T04:19:59.030Z"
+  }
+]

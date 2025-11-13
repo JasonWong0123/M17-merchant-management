@@ -1,0 +1,29 @@
+{
+  "todayOrders": 120,
+  "todayRevenue": 5600.00,
+  "yesterdayOrders": 98,
+  "yesterdayRevenue": 4850.00,
+  "weeklyOrders": 756,
+  "weeklyRevenue": 35420.00,
+  "monthlyOrders": 3240,
+  "monthlyRevenue": 152800.00,
+  "averageOrderValue": 46.67,
+  "peakHours": [
+    { "hour": 12, "orders": 25 },
+    { "hour": 13, "orders": 32 },
+    { "hour": 18, "orders": 28 },
+    { "hour": 19, "orders": 35 }
+  ],
+  "topDishes": [
+    { "dishId": "dish_1", "orders": 45, "revenue": 1710.00 },
+    { "dishId": "dish_2", "orders": 32, "revenue": 1344.00 },
+    { "dishId": "dish_3", "orders": 28, "revenue": 504.00 }
+  ],
+  "ordersByStatus": {
+    "pending": 8,
+    "preparing": 15,
+    "ready": 3,
+    "delivered": 94
+  },
+  "lastUpdated": "2024-11-13T03:30:00Z"
+}
